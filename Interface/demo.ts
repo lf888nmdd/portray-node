@@ -1,13 +1,12 @@
-//轮播图菜单接口
+//demo测试接口
 import express from 'express'
 const router = express.Router()
 
 
-
 router.get('/demo',(req:any,res:any)=>{
-	res.send({data:['demo1','demo2']})
+	const {typesOf,howMany} =req.query
+	res.send({data:[typesOf,howMany]})
 	})
-
 
 
 export default router
